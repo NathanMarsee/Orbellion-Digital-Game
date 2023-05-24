@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
   m_Name: Venom Sting
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 
-  energyCost: 0
-  attack: 0
+  name: Venom Sting
+  description: Description Test
+  type: Attack
+  energyCost: 2
+  attack: 2
