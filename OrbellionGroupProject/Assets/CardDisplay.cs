@@ -11,6 +11,10 @@ public class CardDisplay : MonoBehaviour
     public Text descriptionText;
     public Text energyCostText;
     public Text typeText;
+
+    public Image frameImage;
+    public Image artworkImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,9 @@ public class CardDisplay : MonoBehaviour
         typeText.text = card.type;
 
         energyCostText.text = card.energyCost.ToString();
+
+        frameImage.sprite = card.frame;
+        artworkImage.sprite = card.artwork;
     }
 
 }

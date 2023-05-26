@@ -10,11 +10,9 @@ public class CardScript : ScriptableObject{
     public string type;
 
     public int energyCost;
-    public int attack;
-    
+    public int physicalAttack;
+    public int elementalAttack;
 
-    public void Print()
-    {
-        Debug.Log(name + ": " + description + " The card costs: " + energyCost);
-    }
+    public Sprite artwork;
+    public Sprite frame;
 }

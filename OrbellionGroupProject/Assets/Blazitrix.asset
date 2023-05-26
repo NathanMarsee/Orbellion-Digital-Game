@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dff23e8d9567cc458727ab79063bf0a, type: 3}
+  m_Name: Blazitrix
+  m_EditorClassIdentifier: 
+  name: Blazitrix
+  passive: If defeated, can discard 3 "Ash" cards to bring back to 1 HP and gain
+    10 block.
+  active: Draw an "Ash" card when you deal Elemental damage to enemy Hellion from
+    a Fire source.
+  type: Fire
+  health: 22
+  physicalDef: -1
+  elementalDef: 1
+  artwork: {fileID: 21300000, guid: 3ab6bb2121a62ce4bb0068a45744f4ae, type: 3}
+  frame: {fileID: 21300000, guid: 4e36a9f4f377e014ab5993be9637e64d, type: 3}
