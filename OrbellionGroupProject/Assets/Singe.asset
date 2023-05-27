@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
   m_Name: Singe
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 
-  element: 
-  energyCost: 0
+  name: Singe
+  description: At the beginning of opponent's upkeep, affected Hellion loses 1 HP.
+    Opponent must use 2 energy to remove.
+  type: Status
+  element: fire
+  energyCost: 2
   physicalAttack: 0
   elementalAttack: 0
-  artwork: {fileID: 0}
-  frame: {fileID: 0}
+  artwork: {fileID: 21300000, guid: a99d3f0b399ce3243b591c52eff445f6, type: 3}
+  frame: {fileID: 21300000, guid: e7c9c540e7f501b4d9cf3cb789e70940, type: 3}

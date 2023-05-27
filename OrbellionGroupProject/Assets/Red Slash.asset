@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
   m_Name: Red Slash
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 
-  energyCost: 0
-  physicalAttack: 0
+  name: Red Slash
+  description: Hit an active enemy Hellion for 4 Physical damage.
+  type: Attack
+  element: fire
+  energyCost: 3
+  physicalAttack: 4
   elementalAttack: 0
-  artwork: {fileID: 0}
-  frame: {fileID: 0}
+  artwork: {fileID: 21300000, guid: f1df43b0c83b2fd4188c53f4f76a3bb8, type: 3}
+  frame: {fileID: 21300000, guid: e7c9c540e7f501b4d9cf3cb789e70940, type: 3}

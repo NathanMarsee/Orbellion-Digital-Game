@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
   m_Name: Flaming Delerium
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 
-  element: 
-  energyCost: 0
-  physicalAttack: 0
+  name: Flaming Delerium
+  description: Hit an active enemy Hellion for 7 Physical damage. This hit does 1
+    additional damage if your active Hellion has 10 HP or less, 2 additional damage
+    if it has 5 HP or less.
+  type: Attack
+  element: fire
+  energyCost: 8
+  physicalAttack: 7
   elementalAttack: 0
-  artwork: {fileID: 0}
-  frame: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 826a5b0c707960e48b42c0d333f32f3a, type: 3}
+  frame: {fileID: 21300000, guid: e7c9c540e7f501b4d9cf3cb789e70940, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
     10 block.
   active: Draw an "Ash" card when you deal Elemental damage to enemy Hellion from
     a Fire source.
-  type: Fire
+  elementType: fire
   health: 22
   physicalDef: -1
   elementalDef: 1

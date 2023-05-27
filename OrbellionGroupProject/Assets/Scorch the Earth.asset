@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
   m_Name: Scorch the Earth
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 
-  element: 
-  energyCost: 0
+  name: Scorch the Earth
+  description: Cards you play this turn cost 4 less energy. Whenever you play another
+    card this turn, each of your Hellions loses 1 HP
+  type: Action
+  element: fire
+  energyCost: 6
   physicalAttack: 0
   elementalAttack: 0
-  artwork: {fileID: 0}
-  frame: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 01424114e8b4fbb40826c59215ffb238, type: 3}
+  frame: {fileID: 21300000, guid: e7c9c540e7f501b4d9cf3cb789e70940, type: 3}

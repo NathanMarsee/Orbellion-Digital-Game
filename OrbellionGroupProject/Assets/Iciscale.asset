@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Iciscale
   passive: When opponent swaps active hellion, consider 1.
   active: Opponent cannot swap Hellion if they did so last turn.
-  type: Water
+  elementType: water
   health: 25
   physicalDef: 0
   elementalDef: 0

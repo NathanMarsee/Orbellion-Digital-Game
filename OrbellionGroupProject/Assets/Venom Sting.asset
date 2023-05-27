@@ -16,6 +16,7 @@ MonoBehaviour:
   description: Hit an active enemy Hellion for 2 Physical damage. If that Hellion
     lost HP this way, that Hellion gets Poisoned
   type: Attack
+  element: dark
   energyCost: 2
   physicalAttack: 0
   elementalAttack: 0
