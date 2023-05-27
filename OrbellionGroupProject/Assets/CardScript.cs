@@ -8,6 +8,7 @@ public class CardScript : ScriptableObject{
     public new string name;
     public string description;
     public string type;
+    public string element;
 
     public int energyCost;
     public int physicalAttack;

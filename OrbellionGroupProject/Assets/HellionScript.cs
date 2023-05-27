@@ -8,7 +8,7 @@ public class HellionScript : ScriptableObject
     public new string name;
     public string passive;
     public string active;
-    public string type;
+    public string elementType;
 
     public int health;
     public int physicalDef;
