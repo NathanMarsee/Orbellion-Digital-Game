@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
+    List<Card> cards = new List<Card>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class Hand : MonoBehaviour
     void Update()
     {
         
+    }
+
+    Card discard()
+    {
+        return null;
     }
 }

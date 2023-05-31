@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Discard : MonoBehaviour
 {
+    List<Card> cards = new List<Card>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class Discard : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void view()
+    {
+
     }
 }

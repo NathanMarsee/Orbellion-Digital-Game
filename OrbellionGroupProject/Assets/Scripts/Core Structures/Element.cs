@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Element : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Elem
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Light,
+        Fire,
+        Earth,
+        Dark,
+        Water,
+        Air
     }
 }

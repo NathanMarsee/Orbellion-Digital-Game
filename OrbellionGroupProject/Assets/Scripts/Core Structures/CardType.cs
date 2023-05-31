@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CardType : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Type
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Attack,
+        Action,
+        Status,
+        Terrain,
+        Reaction
     }
 }
