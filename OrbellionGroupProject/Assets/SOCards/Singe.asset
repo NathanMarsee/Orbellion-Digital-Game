@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
+  m_Name: Singe
+  m_EditorClassIdentifier: 
+  name: Singe
+  description: At the beginning of opponent's upkeep, affected Hellion loses 1 HP.
+    Opponent must use 2 energy to remove.
+  type: Status
+  element: fire
+  energyCost: 2
+  physicalAttack: 0
+  elementalAttack: 0
+  artwork: {fileID: 21300000, guid: a99d3f0b399ce3243b591c52eff445f6, type: 3}
+  frame: {fileID: 21300000, guid: e7c9c540e7f501b4d9cf3cb789e70940, type: 3}

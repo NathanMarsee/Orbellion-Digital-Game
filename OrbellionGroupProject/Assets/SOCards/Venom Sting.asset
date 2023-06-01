@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb085f9556486a8499e3e729bafe50a7, type: 3}
+  m_Name: Venom Sting
+  m_EditorClassIdentifier: 
+  name: Venom Sting
+  description: Hit an active enemy Hellion for 2 Physical damage. If that Hellion
+    lost HP this way, that Hellion gets Poisoned
+  type: Attack
+  element: dark
+  energyCost: 2
+  physicalAttack: 0
+  elementalAttack: 0
+  artwork: {fileID: 21300000, guid: c8e0f04e6ef04054ab08d8dd2228b4e2, type: 3}
+  frame: {fileID: 21300000, guid: 5c0f4afae7681be48be92b235290896c, type: 3}

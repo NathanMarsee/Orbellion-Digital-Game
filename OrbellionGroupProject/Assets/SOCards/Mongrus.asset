@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dff23e8d9567cc458727ab79063bf0a, type: 3}
+  m_Name: Mongrus
+  m_EditorClassIdentifier: 
+  name: Mongrus
+  passive: Whenever one of your Hellions loses HP for the third time each turn, you
+    may draw a card.
+  active: When HP is 10 or less, each hit does 1 additonal damage. When HP 5 or less,
+    each hit does 2 additoinal damage.
+  elementType: fire
+  health: 20
+  physicalDef: 1
+  elementalDef: 0
+  artwork: {fileID: 21300000, guid: f0ef13f6644660c468b287af165491cb, type: 3}
+  frame: {fileID: 21300000, guid: 4e36a9f4f377e014ab5993be9637e64d, type: 3}
