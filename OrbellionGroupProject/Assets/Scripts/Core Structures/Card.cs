@@ -1,23 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 
-public class Card : MonoBehaviour
+public class Card
 {
-    string cardName;
-    CardType.Type type;
-    Element.Elem element;
-    int cost;
+    public int id;
+    public string cardName;
+    public int cost;
+    public int power;
+    public string cardDescription;
+    public CardType.Type type;
+    public Element.Elem element;
 
-    // Start is called before the first frame update
-    void Start()
+    public Card()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public Card(int Id, string CardName, int Cost, int Power, string CardDescription, CardType.Type Type, 
+        Element.Elem Element)
     {
-        
+        id = Id;
+        cardName = CardName;
+        cost = Cost;
+        power = Power;
+        cardDescription = CardDescription;
+        type = Type;
+        element = Element;
     }
+
 }
