@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dff23e8d9567cc458727ab79063bf0a, type: 3}
+  m_Name: Iciscale
+  m_EditorClassIdentifier: 
+  name: Iciscale
+  passive: When opponent swaps active hellion, consider 1.
+  active: Opponent cannot swap Hellion if they did so last turn.
+  elementType: water
+  health: 25
+  physicalDef: 0
+  elementalDef: 0
+  artwork: {fileID: 21300000, guid: bc55496ea932ce34e8b80bc3c2758130, type: 3}
+  frame: {fileID: 21300000, guid: 25d2470fca656fb41baedbf3eb12b9a2, type: 3}
