@@ -165,8 +165,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7596046370077432175}
-  - component: {fileID: 7596046370077432169}
-  - component: {fileID: 7596046370077432174}
   - component: {fileID: 7596046370077432168}
   m_Layer: 5
   m_Name: HellionTemplate
@@ -204,41 +202,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7596046370077432169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596046370077432172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc1d88894c56f04b8b02a23f6131caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentToReturnTo: {fileID: 0}
-  card: 0
---- !u!114 &7596046370077432174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596046370077432172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b6e256f39698b46b5af8575a087f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hellion: {fileID: 11400000, guid: 75885c21af182f84aab649e7a3265f05, type: 2}
-  nameText: {fileID: 7596046371355922893}
-  passiveText: {fileID: 7596046369998353818}
-  activeText: {fileID: 7596046371514930186}
-  healthText: {fileID: 7596046371812014517}
-  physicalText: {fileID: 7596046371114726666}
-  elementalText: {fileID: 7596046370463052483}
-  frameImage: {fileID: 7596046370838540477}
-  artworkImage: {fileID: 7596046369813800757}
 --- !u!225 &7596046370077432168
 CanvasGroup:
   m_ObjectHideFlags: 0

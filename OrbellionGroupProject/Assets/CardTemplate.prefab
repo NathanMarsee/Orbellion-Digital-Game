@@ -481,8 +481,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6729938855542080993}
-  - component: {fileID: 6729938855542080992}
-  - component: {fileID: 6729938855542080999}
   - component: {fileID: 6729938855542080998}
   m_Layer: 5
   m_Name: CardTemplate
@@ -517,39 +515,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6729938855542080992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6729938855542080994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d916839a49562044cb34bfb657c1873b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 40f21aae0c335964f91179455d7c19a7, type: 2}
-  nameText: {fileID: 6729938854952248465}
-  descriptionText: {fileID: 6729938854563759188}
-  energyCostText: {fileID: 6729938854816588105}
-  typeText: {fileID: 6729938855357481245}
-  frameImage: {fileID: 6729938854759829441}
-  artworkImage: {fileID: 6729938854152999155}
---- !u!114 &6729938855542080999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6729938855542080994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc1d88894c56f04b8b02a23f6131caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentToReturnTo: {fileID: 0}
-  card: 0
 --- !u!225 &6729938855542080998
 CanvasGroup:
   m_ObjectHideFlags: 0
