@@ -11,10 +11,13 @@ public class RegCardDisplay : MonoBehaviour
     public int id;
     public string cardName;
     public int cost;
-    public int power;
+    public int physicalPower;
+    public int elementalPower;
     public string cardDescription;
     public CardType.Type type;
     public Element.Elem element;
+    public Sprite frame;
+    public Sprite artwork;
 
     public Text nameText;
     public Text costText;
@@ -23,26 +26,51 @@ public class RegCardDisplay : MonoBehaviour
     public Text typeText;
     public Text elementText;
 
+    public Image frameImage;
+    public Image artworkImage;
+
+
     void Start()
     {
         displayCard[0] = CardDatabase.cardList[displayId];
+       
+        id = displayCard[0].id;
+        cardName = displayCard[0].cardName;
+        cost = displayCard[0].cost;
+        cardDescription = displayCard[0].cardDescription;
+        type = displayCard[0].type;
+        element = displayCard[0].element;
+        frame = displayCard[0].frame;
+        artwork = displayCard[0].artwork;
+
+        nameText.text = " " + cardName;
+        costText.text = " " + cost;
+        descriptionText.text = " " + cardDescription;
+        typeText.text = " " + type;
+        elementText.text = " " + element;
+
+        frameImage.sprite = frame;
+        artworkImage.sprite = artwork;
     }
 
     void Update()
     {
+        /*
         id = displayCard[0].id;
         cardName = displayCard[0].cardName;
         cost = displayCard[0].cost;
-        power = displayCard[0].power;
+        //power = displayCard[0].power;
         cardDescription = displayCard[0].cardDescription;
         type = displayCard[0].type;
         element = displayCard[0].element;
 
         nameText.text = " " + cardName;
         costText.text = " " + cost;
-        powerText.text = " " + power;
+        //powerText.text = " " + power;
         descriptionText.text = " " + cardDescription;
         typeText.text = " " + type;
         elementText.text = " " + element;
+        */
+
     }
 }
