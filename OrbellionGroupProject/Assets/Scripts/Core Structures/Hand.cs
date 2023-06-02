@@ -7,6 +7,16 @@ public class Hand : MonoBehaviour
     List<Card> cards = new List<Card>();
 
     // Start is called before the first frame update
+    public Hand()
+    {
+        cards = new List<Card>();
+    }
+
+    public void AddCard(Card card)
+    {
+        cards.Add(card);
+    }    
+
     void Start()
     {
         
