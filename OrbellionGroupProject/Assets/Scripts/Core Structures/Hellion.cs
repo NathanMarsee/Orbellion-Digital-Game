@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Hellion : MonoBehaviour
@@ -21,5 +20,39 @@ public class Hellion : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void physHit()
+    {
+
+    }
+
+    public void ElemHit()
+    {
+
+    }
+
+    public void LoseHP()
+    {
+
+    }
+
+    public bool isDefeated()
+    {
+        return defeated;
+    }
+
+    public void onDamage()
+    {
+        onHPLoss();
+    }
+
+    public void onHPLoss()
+    {
+        if (hp < 0)
+        {
+            hp = 0;
+            defeated = true;
+        }
     }
 }

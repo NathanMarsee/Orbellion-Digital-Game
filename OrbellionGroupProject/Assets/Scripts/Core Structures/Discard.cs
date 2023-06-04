@@ -18,8 +18,17 @@ public class Discard : MonoBehaviour
         
     }
 
-    void view()
+    // FINISHED: remove the card that is passed in. Returns that card if successful, null if unseccessful
+    public Card remove(Card card)
     {
-
+        if (cards.Remove(card))
+        {
+            return card;
+        }
+        else
+        {
+            return null;
+        }
     }
+
 }

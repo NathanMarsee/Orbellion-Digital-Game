@@ -26,7 +26,15 @@ public class Team : MonoBehaviour
 
     public int getNumAlive()
     {
-        return 0;
+        int num = 0;
+        foreach(Hellion hellion in hellions)
+        {
+            if(!hellion.isDefeated())
+            {
+                num++;
+            }
+        }
+        return num;
     }
 
     public void swap(int i)

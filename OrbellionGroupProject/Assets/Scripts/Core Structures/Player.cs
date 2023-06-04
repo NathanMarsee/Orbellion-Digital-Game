@@ -29,7 +29,27 @@ public class Player : MonoBehaviour
     // Player draws a card by addind a drawn card from their deck to their hand. Retuns said card in case it is needed
     public Card draw()
     {
-        return hand.AddCard(deck.DrawCard());
+        Card card = deck.removeTop();
+        if(card == null)
+        {
+            shuffleWithDiscard();
+            card = deck.removeTop();
+        }
+        return hand.addCard(card);
+    }
+
+    public void shuffle()
+    {
+        deck.shuffle();
+    }
+
+    public void shuffleWithDiscard()
+    {
+        foreach(Card card in discardPile.cards)
+        {
+            deck.putOnBottom(discardPile.remove(card));
+        }
+        shuffle();
     }
 
     void swap(int newActive)
@@ -51,20 +71,46 @@ public class Player : MonoBehaviour
     Card discard()
     {
         Card card = null; //placeholder, implement way to choose which card to discard
-        return hand.discard(card);
+        return hand.remove(card);
     }
 
     // Card to discard is already known
     Card discard(Card card)
     {
-        return hand.discard(card);
+        return hand.remove(card);
     }
 
-    void endPhase()
+    // ToDo
+    public void consider()
     {
 
     }
 
+    // ToDo
+    public Card searchDeck()
+    {
+        return null;
+    }
+
+    // ToDo
+    public void viewDiscardPile()
+    {
+        
+    }
+
+    // ToDo 
+    public void mill()
+    {
+
+    }
+
+    // ToDo
+    void nextPhase()
+    {
+
+    }
+
+    //ToDo
     void quit()
     {
 

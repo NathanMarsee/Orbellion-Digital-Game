@@ -12,10 +12,13 @@ public class Hand : MonoBehaviour
         cards = new List<Card>();
     }
 
-    // Card is added to the hand from any source. Returns said card in case it is needed.
-    public Card AddCard(Card card)
+    // FINISHED: Card is added to the hand from any source. Returns said card in case it is needed.
+    public Card addCard(Card card)
     {
-        cards.Add(card);
+        if (card != null)
+        {
+            cards.Add(card);
+        }
         return card;
     }    
 
@@ -30,8 +33,16 @@ public class Hand : MonoBehaviour
         
     }
 
-    public Card discard(Card card)
+    // FINISHED: remove the card that is passed in. Returns that card if successful, null if unseccessful
+    public Card remove(Card card)
     {
-        return null;
+        if (cards.Remove(card))
+        {
+            return card;
+        }
+        else
+        {
+            return null;
+        }
     }
 }
