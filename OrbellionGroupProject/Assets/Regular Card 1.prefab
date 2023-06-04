@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 5086788230082159397}
   - component: {fileID: 6135142457164574489}
   m_Layer: 5
-  m_Name: Regular Card
+  m_Name: Regular Card 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

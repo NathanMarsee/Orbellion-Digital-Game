@@ -23,13 +23,14 @@ public class RegCardDisplay : MonoBehaviour
     public Text typeText;
     public Text elementText;
 
+    public GameObject hand;
+    public int numberOfCardsInDeck;
+
     void Start()
     {
+        numberOfCardsInDeck = Deck.deckSize;
+        
         displayCard[0] = CardDatabase.cardList[displayId];
-    }
-
-    void Update()
-    {
         id = displayCard[0].id;
         cardName = displayCard[0].cardName;
         cost = displayCard[0].cost;
@@ -44,5 +45,26 @@ public class RegCardDisplay : MonoBehaviour
         descriptionText.text = " " + cardDescription;
         typeText.text = " " + type;
         elementText.text = " " + element;
+    }
+
+    void Update()
+    {
+        hand = GameObject.Find("PlayerHand");
+        /*if(this.transform.parent == hand.transform.parent)
+        {
+            cardBack = false;
+        }
+
+        staticCardBack = cardBack;*///Uncomment this when there is a cardback that I can flip to
+
+        if(this.tag == "Clone")
+        {
+            displayCard[0] = Deck.staticDeck[numberOfCardsInDeck - 1];
+            numberOfCardsInDeck -= 1;
+            Deck.deckSize -= 1;
+            //cardBack = false;
+            this.tag = "Untagged";
+        }
+        
     }
 }

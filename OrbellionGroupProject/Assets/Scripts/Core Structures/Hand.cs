@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    List<Card> cards = new List<Card>();
+    public GameObject hand;
+    public GameObject handCard;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +16,10 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    Card discard()
-    {
-        return null;
+        hand = GameObject.Find("PlayerHand");
+        handCard.transform.SetParent(hand.transform);
+        handCard.transform.localScale = Vector3.one;
+        handCard.transform.position = new Vector3(transform.position.x, transform.position.y, -48);
+        handCard.transform.eulerAngles = new Vector3(25, 0, 0);
     }
 }
