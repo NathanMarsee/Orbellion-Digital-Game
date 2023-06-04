@@ -28,7 +28,6 @@ public class RegCardDisplay : MonoBehaviour
 
     void Start()
     {
-        numberOfCardsInDeck = Deck.deckSize;
         
         displayCard[0] = CardDatabase.cardList[displayId];
         id = displayCard[0].id;
@@ -49,22 +48,6 @@ public class RegCardDisplay : MonoBehaviour
 
     void Update()
     {
-        hand = GameObject.Find("PlayerHand");
-        /*if(this.transform.parent == hand.transform.parent)
-        {
-            cardBack = false;
-        }
-
-        staticCardBack = cardBack;*///Uncomment this when there is a cardback that I can flip to
-
-        if(this.tag == "Clone")
-        {
-            displayCard[0] = Deck.staticDeck[numberOfCardsInDeck - 1];
-            numberOfCardsInDeck -= 1;
-            Deck.deckSize -= 1;
-            //cardBack = false;
-            this.tag = "Untagged";
-        }
         
     }
 }

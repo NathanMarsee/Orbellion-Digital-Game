@@ -6,9 +6,8 @@ public class Deck : MonoBehaviour
 {
     public List<Card> deck = new List<Card>();
     public int x;
-    public static int deckSize;
+    public int deckSize;
     public List<Card> container = new List<Card>();
-    public static List<Card> staticDeck = new List<Card>();
 
     public GameObject cardInDeck1;
     public GameObject cardInDeck2;
@@ -16,9 +15,6 @@ public class Deck : MonoBehaviour
     public GameObject cardInDeck4;
     public GameObject cardInDeck5;
 
-    public GameObject Hand;
-    public GameObject[] Clones;
-    public GameObject hand;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +28,11 @@ public class Deck : MonoBehaviour
             deck[i] = CardDatabase.cardList[x];
         }
 
-        StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
     void Update()
     {
-        staticDeck = deck;
 
         if(deckSize < 9)
         {
@@ -77,13 +71,4 @@ public class Deck : MonoBehaviour
         }
     }
 
-    IEnumerator StartGame()
-    {
-        for(int i = 0; i <= 6; i++)
-        {
-            yield return new WaitForSeconds(1);
-
-            Instantiate(Hand, transform.position, transform.rotation);
-        }
-    }
 }
