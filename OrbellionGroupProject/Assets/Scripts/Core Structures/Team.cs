@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Team : MonoBehaviour
 {
-    List<Hellion> hellions = new List<Hellion>();
+    public List<Hellion> hellions = new List<Hellion>();
 
     // Start is called before the first frame update
     void Start()
@@ -19,18 +19,20 @@ public class Team : MonoBehaviour
         
     }
 
-    Hellion getActive()
+    public Hellion getActive()
     {
-        return null;
+        return hellions[0];
     }
 
-    int getNumAlive()
+    public int getNumAlive()
     {
         return 0;
     }
 
-    void swap()
+    public void swap(int i)
     {
-
+        Hellion temp = hellions[i];
+        hellions[i] = hellions[0];
+        hellions[0] = temp;
     }
 }

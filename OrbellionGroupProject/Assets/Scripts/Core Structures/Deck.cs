@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    List<Card> cards = new List<Card>();
+    public List<Card> cards = new List<Card>();
 
     // Start is called before the first frame update
     void Start()
@@ -34,19 +34,17 @@ public class Deck : MonoBehaviour
 
     }
 
+    // Remove and return the top card from the deck.
     public Card DrawCard()
     {
-        // Remove and return the top card from the deck
-        if (cards.Count > 0)
+        if (cards.Count < 0)
         {
-            Card card = cards[0];
-            cards.RemoveAt(0);
-            return card;
+            shuffleWithDiscard();
         }
-        else
-        {
-            return null;
-        }
+        Card card = cards[0];
+        cards.RemoveAt(0);
+        return card;
+
     }
 
     void consider()

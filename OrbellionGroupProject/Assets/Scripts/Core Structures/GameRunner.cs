@@ -1,24 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GameRunner : MonoBehaviour
 {
-    public Deck deck;
-    private Hand playerHand;
-    private Hand opponentHand;
+    public Player player1;
+    public Player player2;
+    public Player firstPlayer;
+    private Player currentPlayer;
+    public int startingHand;
+    public int startingEnergy;
+    private bool firstTurn;
+    public static event Action OnUpkeepPhase;
+    public static event Action OnEndPhase;
 
     public void Start()
     {
-        // Initialize the deck
-        deck = new Deck();
-        deck.shuffle();
-
-        // Deal cards to the player and opponent
-        playerHand = new Hand();
-        opponentHand = new Hand();
-        DealCards(5, playerHand);
-        DealCards(5, opponentHand);
+        startGame();
     }
 
     private void Update()
@@ -26,12 +23,81 @@ public class GameRunner : MonoBehaviour
         // Left for inputs, Game logic, etc.
     }
 
-    private void DealCards(int numCards, Hand hand)
+    private void startGame()
     {
-        for (int i = 0; i < numCards; i++)
+        player1.deck.shuffle();
+        player2.deck.shuffle();
+
+        player1.baseEnergy = startingEnergy;
+        player2.baseEnergy = startingEnergy;
+
+        for (int i = 0; i < startingHand; i++)
         {
-            Card card = deck.DrawCard();
-            hand.AddCard(card);
+            player1.draw();
+            player2.draw();
         }
+
+        if(firstPlayer == null)
+        {
+            firstPlayer = player1;
+        }
+        firstTurn = true;
+        nextTurn();
+    }
+
+    private void nextTurn()
+    {
+        if(currentPlayer == null)
+        {
+            currentPlayer = firstPlayer;
+        } else
+        {
+            currentPlayer = currentPlayer.opponent;
+        }
+
+        switch (currentPlayer.team.getNumAlive())
+        {
+            case 3:
+                currentPlayer.maxEnergy = 6;
+                break;
+            case 2:
+                currentPlayer.maxEnergy = 8;
+                break;
+            case 1:
+                currentPlayer.maxEnergy = 10;
+                break;
+        }
+        if (!firstTurn)
+        {
+            if (currentPlayer.baseEnergy < currentPlayer.maxEnergy)
+            {
+                currentPlayer.baseEnergy++;
+            }
+        }
+        currentPlayer.currentEnergy = currentPlayer.baseEnergy;
+
+        upkeepPhase();
+    }
+
+    private void upkeepPhase()
+    {
+        OnUpkeepPhase?.Invoke();
+        if (!firstTurn)
+        {
+            currentPlayer.draw();
+        }
+        playPhase();
+    }
+
+    private void playPhase()
+    {
+
+        endPhase();
+    }
+
+    private void endPhase()
+    {
+        OnEndPhase?.Invoke();
+        nextTurn();
     }
 }

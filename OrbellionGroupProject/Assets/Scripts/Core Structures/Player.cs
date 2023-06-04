@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Deck deck;
-    Hand hand;
-    Discard discardPile;
-    Team team;
-    Player opponent;
+    public Deck deck;
+    public Hand hand;
+    public Discard discardPile;
+    public Team team;
+    public Player opponent;
 
-    int maxEnergy;
-    int baseEnergy;
-    int currentEnergy;
+    public int maxEnergy;
+    public int baseEnergy;
+    public int currentEnergy;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +26,15 @@ public class Player : MonoBehaviour
         
     }
 
-    Card draw()
+    // Player draws a card by addind a drawn card from their deck to their hand. Retuns said card in case it is needed
+    public Card draw()
     {
-        return null;
+        return hand.AddCard(deck.DrawCard());
     }
 
-    void swap()
+    void swap(int newActive)
     {
-
+        team.swap(newActive);
     }
 
     void replenish()
@@ -46,9 +47,17 @@ public class Player : MonoBehaviour
 
     }
 
+    // Player chooses which card to discard
     Card discard()
     {
-        return null;
+        Card card = null; //placeholder, implement way to choose which card to discard
+        return hand.discard(card);
+    }
+
+    // Card to discard is already known
+    Card discard(Card card)
+    {
+        return hand.discard(card);
     }
 
     void endPhase()
