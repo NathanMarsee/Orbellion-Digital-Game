@@ -7,23 +7,68 @@ using UnityEngine;
 public class Deck : MonoBehaviour
 {
     public List<Card> cards = new List<Card>();
+    public int x;
+    public int deckSize;
+    public List<Card> container = new List<Card>();
+
+    public GameObject cardInDeck1;
+    public GameObject cardInDeck2;
+    public GameObject cardInDeck3;
+    public GameObject cardInDeck4;
+    public GameObject cardInDeck5;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        x = 0;
+        deckSize = 10;
+
+        for(int i = 0; i < deckSize; i++)
+        {
+            x = Random.Range(1,4);
+            cards[i] = CardDatabase.cardList[x];
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(deckSize < 9)
+        {
+            cardInDeck1.SetActive(false);
+        }
+
+        if(deckSize < 7)
+        {
+            cardInDeck2.SetActive(false);
+        }
+
+        if(deckSize < 5)
+        {
+            cardInDeck3.SetActive(false);
+        }
+
+        if(deckSize < 3)
+        {
+            cardInDeck4.SetActive(false);
+        }
+
+        if(deckSize < 1)
+        {
+            cardInDeck5.SetActive(false);
+        }
     }
 
-    // ToDo
+    // FINISHED: find a shuffling algorithm and implement it here
     public void shuffle()
     {
-        // We need to find a shuffling algorithm and implement it here
+        for(int i = 0; i < deckSize; i++)
+        {
+            container[0] = cards[i];
+            int randomIndex = Random.Range(i, deckSize);
+            cards[i] = cards[randomIndex];
+            cards[randomIndex] = container[0];
+        }
     }
 
     // FINISHED: returns the top card
