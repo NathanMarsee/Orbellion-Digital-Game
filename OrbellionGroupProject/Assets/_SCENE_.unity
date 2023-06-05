@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969fd96e4de96ad428b3321dedc27219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: {fileID: 0}
+  deck: {fileID: 1738836384}
   hand: {fileID: 171440279}
   discardPile: {fileID: 923447547}
   team: {fileID: 494411107}
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969fd96e4de96ad428b3321dedc27219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: {fileID: 0}
+  deck: {fileID: 1979169983}
   hand: {fileID: 414687759}
   discardPile: {fileID: 1279352489}
   team: {fileID: 896577047}
@@ -2505,7 +2505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 980028167}
   player2: {fileID: 556368023}
-  firstPlayer: {fileID: 0}
+  firstPlayer: {fileID: 980028167}
   startingHand: 5
   startingEnergy: 0
 --- !u!4 &1485173203

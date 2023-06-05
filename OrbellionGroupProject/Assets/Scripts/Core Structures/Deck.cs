@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-// A Deck is primarily a list of cards, with the top card represented by index 0 of the list. However, it is also responsible for its own shuffling, 
+// A Deck is primarily a list of cards, with the top card represented by index 0 of the list.
 public class Deck : MonoBehaviour
 {
     public List<Card> cards = new List<Card>();
