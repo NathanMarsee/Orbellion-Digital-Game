@@ -15,7 +15,7 @@ public class GameRunner : MonoBehaviour
 
     public void Start()
     {
-        startGame();
+       // startGame();
     }
 
     private void Update()
