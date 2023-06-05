@@ -21,10 +21,8 @@ public class RegCardDisplay : MonoBehaviour
 
     public Text nameText;
     public Text costText;
-    public Text powerText;
     public Text descriptionText;
     public Text typeText;
-    public Text elementText;
 
     public Image frameImage;
     public Image artworkImage;
@@ -50,7 +48,6 @@ public class RegCardDisplay : MonoBehaviour
         costText.text = " " + cost;
         descriptionText.text = " " + cardDescription;
         typeText.text = " " + type;
-        elementText.text = " " + element;
 
         frameImage.sprite = frame;
         artworkImage.sprite = artwork;

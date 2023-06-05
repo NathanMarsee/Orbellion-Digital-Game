@@ -1248,12 +1248,10 @@ MonoBehaviour:
   artwork: {fileID: 0}
   nameText: {fileID: 5446776678080788565}
   costText: {fileID: 1316871545303632931}
-  powerText: {fileID: 1681220358768101748}
   descriptionText: {fileID: 1709432728885691334}
   typeText: {fileID: 3518698332939564762}
-  elementText: {fileID: 2534511541612855268}
-  frameImage: {fileID: 0}
-  artworkImage: {fileID: 0}
+  frameImage: {fileID: 6704289229184456619}
+  artworkImage: {fileID: 595811256008439102}
   cardBack: 1
 --- !u!114 &3325512249103907497
 MonoBehaviour:
