@@ -50,6 +50,7 @@ public class Hellion : MonoBehaviour
         hp -= i;
         if(hp <= 0 && block == 0)
         {
+            hp = 0;
             defeated = true;
         }
             
