@@ -29,6 +29,9 @@ public class RegCardDisplay : MonoBehaviour
     public Image frameImage;
     public Image artworkImage;
 
+    public bool cardBack;
+    public static bool staticCardBack;
+
 
     void Start()
     {
@@ -71,6 +74,8 @@ public class RegCardDisplay : MonoBehaviour
         typeText.text = " " + type;
         elementText.text = " " + element;
         */
+
+        staticCardBack = cardBack;
 
     }
 }
