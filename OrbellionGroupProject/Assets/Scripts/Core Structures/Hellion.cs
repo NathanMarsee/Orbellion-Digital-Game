@@ -8,6 +8,7 @@ public class Hellion : MonoBehaviour
     int hp;
     int physDef;
     int elemDef;
+    int block;
     bool defeated;
 
     // Start is called before the first frame update
@@ -22,19 +23,47 @@ public class Hellion : MonoBehaviour
         
     }
 
-    public void physHit()
+    public void physHit(int i)
     {
-
+        if (i > physDef)
+        {
+            if (block == 0)
+                LoseHP(i - physDef);
+            else
+                LoseBlock(i - physDef);
+        }
     }
 
-    public void ElemHit()
+    public void ElemHit(int i)
     {
-
+        if(i > elemDef)
+        {
+            if (block == 0)
+                LoseHP(i - elemDef);
+            else
+                LoseBlock(i - elemDef);
+        }
     }
 
-    public void LoseHP()
+    public void LoseHP(int i)
     {
+        hp -= i;
+        if(hp <= 0 && block == 0)
+        {
+            defeated = true;
+        }
+            
+    }
 
+    public void LoseBlock(int i)
+    {
+        block -= i;
+        if (block < 0)
+        {
+            int dmg = block * -1;
+            block = 0;
+            LoseHP(dmg);
+        }
     }
 
     public bool isDefeated()

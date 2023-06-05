@@ -13,6 +13,7 @@ public class HellionScript : ScriptableObject
     public int health;
     public int physicalDef;
     public int elementalDef;
+    public int block;
 
     public Sprite artwork;
     public Sprite frame;
