@@ -27,9 +27,10 @@ public class Team : MonoBehaviour
     public int getNumAlive()
     {
         int num = 0;
-        foreach(Hellion hellion in hellions)
+       // foreach(Hellion hellion in hellions)
+        for( int i = 0; i < 3; i++)
         {
-            if(!hellion.isDefeated())
+            if(!hellions[i].isDefeated())
             {
                 num++;
             }

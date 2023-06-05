@@ -8,7 +8,6 @@ public class Deck : MonoBehaviour
 {
     public List<Card> cards = new List<Card>();
     public int x;
-    public int deckSize;
     public List<Card> container = new List<Card>();
 
     public GameObject cardInDeck1;
@@ -21,9 +20,8 @@ public class Deck : MonoBehaviour
     void Start()
     {
         x = 0;
-        deckSize = 10;
 
-        for(int i = 0; i < deckSize; i++)
+        for(int i = 0; i < cards.Count; i++)
         {
             x = Random.Range(1,7);
             cards[i] = CardDatabase.cardList[x];
@@ -33,27 +31,27 @@ public class Deck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(deckSize < 9)
+        if(cards.Count < 9)
         {
             cardInDeck1.SetActive(false);
         }
 
-        if(deckSize < 7)
+        if(cards.Count < 7)
         {
             cardInDeck2.SetActive(false);
         }
 
-        if(deckSize < 5)
+        if(cards.Count < 5)
         {
             cardInDeck3.SetActive(false);
         }
 
-        if(deckSize < 3)
+        if(cards.Count < 3)
         {
             cardInDeck4.SetActive(false);
         }
 
-        if(deckSize < 1)
+        if(cards.Count < 1)
         {
             cardInDeck5.SetActive(false);
         }
@@ -62,12 +60,12 @@ public class Deck : MonoBehaviour
     // FINISHED: find a shuffling algorithm and implement it here
     public void shuffle()
     {
-        for(int i = 0; i < deckSize; i++)
+        for(int i = 0; i < cards.Count; i++)
         {
-            container[0] = cards[i];
-            int randomIndex = Random.Range(i, deckSize);
+            Card temp = cards[i];
+            int randomIndex = Random.Range(i, cards.Count);
             cards[i] = cards[randomIndex];
-            cards[randomIndex] = container[0];
+            cards[randomIndex] = temp;
         }
     }
 
