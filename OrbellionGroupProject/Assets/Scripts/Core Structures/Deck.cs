@@ -17,19 +17,19 @@ public class Deck : MonoBehaviour
     public GameObject cardInDeck5;
 
     public GameObject CardBack;
-    public GameObject playerDeck;
+    //public GameObject playerDeck;
     public GameObject[] Clones;
 
     // Start is called before the first frame update
     void Start()
     {
-        x = 0;
+        /*x = 0;
 
         for(int i = 0; i < cards.Count; i++)
         {
             x = Random.Range(1,7);
             cards[i] = CardDatabase.cardList[x];
-        }
+        }*/
     }
 
     // Update is called once per frame

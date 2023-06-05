@@ -4,7 +4,7 @@ using UnityEngine;
 public class Hellion : MonoBehaviour
 {
     string hellName;
-    Element.Elem element;
+    Element element;
     int hp;
     int physDef;
     int elemDef;

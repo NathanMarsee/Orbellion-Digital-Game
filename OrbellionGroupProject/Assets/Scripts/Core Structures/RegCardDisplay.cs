@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RegCardDisplay : MonoBehaviour
 {
-    public List<Card> displayCard = new List<Card>();
+    public Card displayCard;
     public int displayId;
     public int id;
     public string cardName;
@@ -14,8 +14,8 @@ public class RegCardDisplay : MonoBehaviour
     public int physicalPower;
     public int elementalPower;
     public string cardDescription;
-    public CardType.Type type;
-    public Element.Elem element;
+    public CardType type;
+    public Element element;
     public Sprite frame;
     public Sprite artwork;
 
@@ -33,21 +33,23 @@ public class RegCardDisplay : MonoBehaviour
 
     void Start()
     {
-        displayCard[0] = CardDatabase.cardList[displayId];
+        displayCard = this.gameObject.GetComponent<Card>();
        
-        id = displayCard[0].id;
-        cardName = displayCard[0].cardName;
-        cost = displayCard[0].cost;
-        cardDescription = displayCard[0].cardDescription;
-        type = displayCard[0].type;
-        element = displayCard[0].element;
-        frame = displayCard[0].frame;
-        artwork = displayCard[0].artwork;
+        //id = displayCard.id;
+        cardName = displayCard.cardName;
+        cost = displayCard.cost;
+        cardDescription = displayCard.cardDescription;
+        type = displayCard.type;
+        element = displayCard.element;
+        //frame = displayCard.frame;
+        //artwork = displayCard.artwork;
+        frame = Resources.Load<Sprite>(displayCard.element.ToString().ToLower());
+        artwork = Resources.Load<Sprite>(displayCard.cardName.Replace(" ", "_").ToLower());
 
-        nameText.text = " " + cardName;
-        costText.text = " " + cost;
-        descriptionText.text = " " + cardDescription;
-        typeText.text = " " + type;
+        nameText.text = cardName;
+        costText.text = cost.ToString("G");
+        descriptionText.text = cardDescription;
+        typeText.text = type.ToString("G");
 
         frameImage.sprite = frame;
         artworkImage.sprite = artwork;

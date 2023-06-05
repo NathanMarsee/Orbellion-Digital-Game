@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // This class is just an enum to reference the different Card Types
-public class CardType : MonoBehaviour
+public enum CardType
 {
-    public enum Type
-    {
-        Attack,
-        Action,
-        Status,
-        Terrain,
-        Reaction
-    }
+    Attack,
+    Action,
+    Status,
+    Terrain,
+    Reaction
 }

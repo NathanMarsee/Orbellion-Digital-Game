@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CardDatabase : MonoBehaviour
 {
-    public static List<Card> cardList = new List<Card>();
+    /*public static List<Card> cardList = new List<Card>();
 
     void Awake()
     {
-        // id, name, cost, physicalPower, elementalPower, description, type, element, frame, artwork
+       // id, name, cost, physicalPower, elementalPower, description, type, element, frame, artwork
        cardList.Add(new Card(0, "Red Slash", 3, 4, 0, "Hit an active enemy Hellion for 4 Physical damage.", CardType.Type.Attack, Element.Elem.Fire, Resources.Load<Sprite>("fire"), Resources.Load<Sprite>("red_slash")));
        cardList.Add(new Card(1, "Bone Claw", 2, 3, 0, "Hit an active enemy Hellion for 3 Physical damage. Your active Hellion loses 1 HP.", CardType.Type.Attack, Element.Elem.Fire, Resources.Load<Sprite>("fire"), 
            Resources.Load<Sprite>("bone_claw")));
@@ -24,5 +24,5 @@ public class CardDatabase : MonoBehaviour
            Element.Elem.Fire, Resources.Load<Sprite>("fire"), Resources.Load<Sprite>("scorch_the_earth")));
        cardList.Add(new Card(7, "Red Slash", 8, 7, 0, "Hit an active enemy Hellion for 7 Physical damage. This hit does 1 additional damage if your active Hellion has 10 HP or less, 2 additional damage if your active Hellion has 5 HP or less.",
            CardType.Type.Attack, Element.Elem.Fire, Resources.Load<Sprite>("fire"), Resources.Load<Sprite>("flaming_delerium")));
-    }
+    }*/
 }

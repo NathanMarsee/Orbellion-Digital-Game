@@ -1,23 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[System.Serializable]
 
-public class Card
+public abstract class Card : MonoBehaviour
 {
-    public int id;
-    public string cardName;
+    public abstract string cardName { get; }
+    public abstract int baseCost { get; }
     public int cost;
-    public int physicalPower;
-    public int elementalPower;
-    public string cardDescription;
-    public CardType.Type type;
-    public Element.Elem element;
+    public abstract string cardDescription { get; }
+    public abstract CardType type { get; }
+    public abstract Element element { get; }
+    public abstract Target validTarge { get; }
 
-    public Sprite frame;
-    public Sprite artwork;
+    public abstract void OnPlay(GameObject target);
 
-    public Card()
+
+    /*public Card()
     {
 
     }
@@ -36,6 +35,8 @@ public class Card
 
         frame = Frame;
         artwork = Artwork;
-    }
+    }*/
+
+
 
 }
