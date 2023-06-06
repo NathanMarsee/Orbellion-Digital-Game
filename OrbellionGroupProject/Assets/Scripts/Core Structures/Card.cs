@@ -8,12 +8,18 @@ public abstract class Card : MonoBehaviour
     public abstract string cardName { get; }
     public abstract int baseCost { get; }
     public int cost;
+    public Player owner;
     public abstract string cardDescription { get; }
     public abstract CardType type { get; }
     public abstract Element element { get; }
     public abstract Target validTarge { get; }
 
     public abstract void OnPlay(GameObject target);
+
+    private void Awake()
+    {
+        cost = baseCost;
+    }
 
 
     /*public Card()

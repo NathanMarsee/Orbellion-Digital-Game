@@ -18,16 +18,6 @@ public class RedSlash : Card
 
     public override Target validTarge { get { return Target.ActiveEnemyHellion; } }
 
-    /*public string cardName = "Red Slash";
-public int baseCost = 3;
-public string cardDescription = "Hit an active enemy hellion for 4 Physical damage.";
-public CardType type = CardType.Attack;
-public Element element = Element.Fire;
-public Target validTarget = Target.ActiveEnemyHellion;
-
-public Sprite frame;
-public Sprite artwork;*/
-
 
     override public void OnPlay(GameObject target)
     {
