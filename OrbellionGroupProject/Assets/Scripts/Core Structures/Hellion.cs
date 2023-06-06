@@ -91,4 +91,26 @@ public abstract class Hellion : MonoBehaviour
             defeated = true;
         }
     }
+
+    public int getHP()
+    {
+        return hp;
+    }
+
+    public int getPhysDef()
+    {
+        return physDef;
+    }
+
+    public void addHp(int i)
+    {
+        hp += i;
+    }
+
+    /*
+    public void setPhysDef(int i)
+    {
+        physDef += i;
+    }
+    */
 }
