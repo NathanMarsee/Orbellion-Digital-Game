@@ -2,8 +2,11 @@
 CSCD 350 group project
 
 Nathan Marsee
+
 Daniel Palmer
+
 Logan Stoltz
+
 Randy Pipkins
 
 A Student Led Project for Dr. Sanmeet Kaur's Spring 2023 CSCD350 Class
