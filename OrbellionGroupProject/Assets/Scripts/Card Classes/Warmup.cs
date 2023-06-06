@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Warmup : Card
 {
-    public override string cardName { get { return "Warm-up"; } }
+    public override string cardName { get { return "Warm Up"; } }
 
     public override int baseCost { get { return 4; } }
 
