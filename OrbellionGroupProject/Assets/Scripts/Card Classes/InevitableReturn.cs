@@ -20,7 +20,7 @@ public class InevitableReturn : Card
 
     override public void OnPlay(GameObject target)
     {
-        // implement
+        owner.viewDiscardPile();
     }
 
 }

@@ -21,6 +21,7 @@ public class Cinderblast : Card
     override public void OnPlay(GameObject target)
     {
         target.GetComponent<Hellion>().elemHit(7);
+        //owner.draw();
     }
 
 }

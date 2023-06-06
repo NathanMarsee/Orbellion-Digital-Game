@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
     }
 
     // Player chooses which card to discard
-    Card discard()
+    public Card discard()
     {
         Card card = null; //placeholder, implement way to choose which card to discard
         return hand.remove(card);

@@ -21,6 +21,7 @@ public class ChanneltheInferno : Card
     override public void OnPlay(GameObject target)
     {
         //implement
+        //owner.draw();
     }
 
 }

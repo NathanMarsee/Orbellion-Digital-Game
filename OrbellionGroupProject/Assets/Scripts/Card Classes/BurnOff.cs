@@ -21,7 +21,7 @@ public class BurnOff : Card
     override public void OnPlay(GameObject target)
     {
         target.GetComponent<Hellion>().physHit(4);
-        //owner.team.getActive()
+        //owner.team.getActive()  //remove status
     }
 
 }

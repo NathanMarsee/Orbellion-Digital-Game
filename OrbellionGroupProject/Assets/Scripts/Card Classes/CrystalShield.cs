@@ -10,7 +10,7 @@ public class CrystalShield : Card
 
     public override int baseCost { get { return 3; } }
 
-    public override string cardDescription { get { return "One of your Hellions has +1 Physical Defense until th ebeginning of your next turn."; } }
+    public override string cardDescription { get { return "One of your Hellions has +1 Physical Defense until the beginning of your next turn."; } }
 
     public override CardType type { get { return CardType.Action; } }
 

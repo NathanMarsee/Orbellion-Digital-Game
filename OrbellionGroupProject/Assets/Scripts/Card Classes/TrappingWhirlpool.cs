@@ -21,6 +21,7 @@ public class TrappingWhirlpool : Card
     override public void OnPlay(GameObject target)
     {
         target.GetComponent<Hellion>().elemHit(2);
+        // implement
     }
 
 }

@@ -20,7 +20,18 @@ public class ConsulttheFlames : Card
 
     override public void OnPlay(GameObject target)
     {
-        //implement
+        int i = 0;
+        while(i < 3)
+        {
+            owner.draw();
+            i++;
+        }
+        i = 0;
+        while(i < 2)
+        {
+            owner.discard();
+        }
+     
     }
 
 }

@@ -20,7 +20,7 @@ public class Embershot : Card
 
     override public void OnPlay(GameObject target)
     {
-        //discard card from player hand
+        owner.discard();
         target.GetComponent<Hellion>().elemHit(4);
     }
 

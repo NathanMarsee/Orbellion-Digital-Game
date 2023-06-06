@@ -19,9 +19,11 @@ public class ReachIntoEmbers : Card
     public override Target validTarge { get { return Target.Player; } }
 
 
-    // add draw cards
     override public void OnPlay(GameObject target)
     {
+        owner.draw();
+        owner.draw();
+        owner.discard();
         owner.team.getActive().loseHP(2);
     }
 

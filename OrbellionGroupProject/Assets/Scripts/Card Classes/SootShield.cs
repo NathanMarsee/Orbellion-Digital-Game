@@ -23,7 +23,7 @@ public class SootShield : Card
         int i = 0;
         while (i != 0) //change
         {
-            //discard
+            owner.discard();
             i++;
         }
         target.GetComponent<Hellion>().addBlock(i);
