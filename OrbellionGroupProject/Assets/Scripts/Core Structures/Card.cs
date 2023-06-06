@@ -15,6 +15,11 @@ public abstract class Card : MonoBehaviour
 
     public abstract void OnPlay(GameObject target);
 
+    private void Awake()
+    {
+        cost = baseCost;
+    }
+
 
     /*public Card()
     {

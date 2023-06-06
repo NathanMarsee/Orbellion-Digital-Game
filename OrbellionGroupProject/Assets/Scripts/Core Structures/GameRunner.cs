@@ -91,7 +91,7 @@ public class GameRunner : MonoBehaviour
 
     private void playPhase()
     {
-
+        
         endPhase();
     }
 
