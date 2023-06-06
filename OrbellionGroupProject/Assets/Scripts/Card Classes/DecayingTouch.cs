@@ -1,6 +1,5 @@
 using System.Collections;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,7 +16,7 @@ public class DecayingTouch : Card
 
     public override Element element { get { return Element.Dark; } }
 
-    public override Target validTarge { get { return Target.EachOfYourHellions; } }
+    public override Target validTarget { get { return Target.EachOfYourHellions; } }
 
     override public void OnPlay(GameObject target)
     {

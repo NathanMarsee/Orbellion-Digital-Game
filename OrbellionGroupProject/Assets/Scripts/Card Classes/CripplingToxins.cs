@@ -16,7 +16,7 @@ public class CripplingToxins : Card
 
     public override Element element { get { return Element.Dark; } }
 
-    public override Target validTarge { get { return Target.ActiveEnemyHellion; } }
+    public override Target validTarget { get { return Target.ActiveEnemyHellion; } }
 
     override public void OnPlay(GameObject target)
     {

@@ -16,7 +16,7 @@ public class NoxiousGas : Card
 
     public override Element element { get { return Element.Dark; } }
 
-    public override Target validTarge { get { return Target.Opponent; } }
+    public override Target validTarget { get { return Target.Opponent; } }
 
     override public void OnPlay(GameObject target)
     {
