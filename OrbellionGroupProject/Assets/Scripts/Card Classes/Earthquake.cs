@@ -16,7 +16,7 @@ public class Earthquake : Card
 
     public override Element element { get { return Element.Earth; } }
 
-    public override Target validTarge { get { return Target.EachEnemyHellions; } }
+    public override Target validTarget { get { return Target.EachEnemyHellions; } }
 
     override public void OnPlay(GameObject target)
     {

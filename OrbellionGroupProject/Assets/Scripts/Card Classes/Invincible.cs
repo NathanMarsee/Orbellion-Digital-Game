@@ -16,7 +16,7 @@ public class Invincible : Card
 
     public override Element element { get { return Element.Earth; } }
 
-    public override Target validTarge { get { return Target.YourActiveHellion; } }
+    public override Target validTarget { get { return Target.YourActiveHellion; } }
 
     override public void OnPlay(GameObject target)
     {

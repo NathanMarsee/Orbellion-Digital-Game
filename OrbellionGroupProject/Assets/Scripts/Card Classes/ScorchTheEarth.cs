@@ -16,7 +16,7 @@ public class ScorchTheEarth : Card
 
     public override Element element { get { return Element.Fire; } }
 
-    public override Target validTarge { get { return Target.EachOfYourHellions; } }
+    public override Target validTarget { get { return Target.EachOfYourHellions; } }
 
     override public void OnPlay(GameObject target)
     {

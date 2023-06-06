@@ -16,7 +16,7 @@ public class ConsiderateClobbering : Card
 
     public override Element element { get { return Element.Earth; } }
 
-    public override Target validTarge { get { return Target.EnemyHellion; } }
+    public override Target validTarget { get { return Target.EnemyHellion; } }
 
     override public void OnPlay(GameObject target)
     {

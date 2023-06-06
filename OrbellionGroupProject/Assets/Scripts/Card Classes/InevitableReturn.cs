@@ -16,7 +16,7 @@ public class InevitableReturn : Card
 
     public override Element element { get { return Element.Earth; } }
 
-    public override Target validTarge { get { return Target.You; } }
+    public override Target validTarget { get { return Target.You; } }
 
     override public void OnPlay(GameObject target)
     {

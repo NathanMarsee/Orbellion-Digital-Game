@@ -16,7 +16,7 @@ public class ProtectingCurrent : Card
 
     public override Element element { get { return Element.Water; } }
 
-    public override Target validTarge { get { return Target.YourActiveHellion; } }
+    public override Target validTarget { get { return Target.YourActiveHellion; } }
 
     override public void OnPlay(GameObject target)
     {

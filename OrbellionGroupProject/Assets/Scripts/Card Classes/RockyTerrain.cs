@@ -16,7 +16,7 @@ public class RockyTerrain : Card
 
     public override Element element { get { return Element.Earth; } }
 
-    public override Target validTarge { get { return Target.None; } }
+    public override Target validTarget { get { return Target.None; } }
 
     override public void OnPlay(GameObject target)
     {

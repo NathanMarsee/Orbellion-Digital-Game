@@ -12,7 +12,7 @@ public abstract class Card : MonoBehaviour
     public abstract string cardDescription { get; }
     public abstract CardType type { get; }
     public abstract Element element { get; }
-    public abstract Target validTarge { get; }
+    public abstract Target validTarget { get; }
 
     public abstract void OnPlay(GameObject target);
 

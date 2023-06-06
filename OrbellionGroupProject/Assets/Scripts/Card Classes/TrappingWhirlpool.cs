@@ -16,7 +16,7 @@ public class TrappingWhirlpool : Card
 
     public override Element element { get { return Element.Water; } }
 
-    public override Target validTarge { get { return Target.EachEnemyHellions; } }
+    public override Target validTarget { get { return Target.EachEnemyHellions; } }
 
     override public void OnPlay(GameObject target)
     {

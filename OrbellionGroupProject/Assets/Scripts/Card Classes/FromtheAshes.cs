@@ -16,12 +16,12 @@ public class FromtheAshes : Card
 
     public override Element element { get { return Element.Fire; } }
 
-    public override Target validTarge { get { return Target.You; } }
+    public override Target validTarget { get { return Target.You; } }
 
     override public void OnPlay(GameObject target)
     {
         //discard
-        int i = 0;
+        //int i = 0;
         //if(i >= 3)
             //add 2 energy
     }

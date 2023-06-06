@@ -16,7 +16,7 @@ public class EarthenWall : Card
 
     public override Element element { get { return Element.Earth; } }
 
-    public override Target validTarge { get { return Target.EachOfYourHellions; } }
+    public override Target validTarget { get { return Target.EachOfYourHellions; } }
 
     override public void OnPlay(GameObject target)
     {

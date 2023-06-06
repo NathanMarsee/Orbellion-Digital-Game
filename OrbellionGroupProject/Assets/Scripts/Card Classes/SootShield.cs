@@ -16,7 +16,7 @@ public class SootShield : Card
 
     public override Element element { get { return Element.Fire; } }
 
-    public override Target validTarge { get { return Target.YourHellion; } }
+    public override Target validTarget { get { return Target.YourHellion; } }
 
     override public void OnPlay(GameObject target)
     {

@@ -16,7 +16,7 @@ public class ReachIntoEmbers : Card
 
     public override Element element { get { return Element.Fire; } }
 
-    public override Target validTarge { get { return Target.Player; } }
+    public override Target validTarget { get { return Target.Player; } }
 
 
     override public void OnPlay(GameObject target)
