@@ -250,11 +250,10 @@ GameObject:
   - component: {fileID: 5801016384032653700}
   - component: {fileID: 7116127422005676612}
   - component: {fileID: 6135142457164574489}
-  - component: {fileID: -261710401489015334}
   - component: {fileID: 997073758}
   m_Layer: 5
-  m_Name: CardToHand
-  m_TagString: Untagged
+  m_Name: ShuffleCard
+  m_TagString: Clone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,21 +381,7 @@ MonoBehaviour:
   typeText: {fileID: 2229979699975510593}
   frameImage: {fileID: 8299285621898492720}
   artworkImage: {fileID: 2765818112892705189}
-  cardBack: 0
---- !u!114 &-261710401489015334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942358013264358252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 175e6da47797324498c7551d3beaf732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentToReturnTo: {fileID: 0}
-  placeholderParent: {fileID: 0}
+  cardBack: 1
 --- !u!114 &997073758
 MonoBehaviour:
   m_ObjectHideFlags: 0
