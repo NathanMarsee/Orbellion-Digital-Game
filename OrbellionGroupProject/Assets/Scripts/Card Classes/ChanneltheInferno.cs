@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ChanneltheInferno : Card
+public class ChannelTheInferno : Card
 {
     public override string cardName { get { return "Channel the Inferno"; } }
 

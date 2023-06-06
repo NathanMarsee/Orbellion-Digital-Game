@@ -4,24 +4,24 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Warmup : Card
+public class CripplingToxins : Card
 {
-    public override string cardName { get { return "Warm Up"; } }
+    public override string cardName { get { return "Crippling Toxins"; } }
 
     public override int baseCost { get { return 4; } }
 
-    public override string cardDescription { get { return "Attack an active enemy Hellion for 3 damage. Other Attack cards you play this turn that cause Elemental damage cost 1 less energy."; } }
+    public override string cardDescription { get { return "Hit an enemy Hellion for 3 Elemental damage. If that Hellion has a \"Poison\" Status, draw a card"; } }
 
     public override CardType type { get { return CardType.Attack; } }
 
-    public override Element element { get { return Element.Fire; } }
+    public override Element element { get { return Element.Dark; } }
 
     public override Target validTarge { get { return Target.ActiveEnemyHellion; } }
 
     override public void OnPlay(GameObject target)
     {
         target.GetComponent<Hellion>().elemHit(3);
-        //reduce energy cost
+        //inflict poison
     }
 
 }

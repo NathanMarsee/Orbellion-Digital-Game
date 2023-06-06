@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TitansStrike : Card
 {
-    public override string cardName { get { return "Titan\'s Strike"; } }
+    public override string cardName { get { return "Titans Strike"; } }
 
     public override int baseCost { get { return 6; } }
 
