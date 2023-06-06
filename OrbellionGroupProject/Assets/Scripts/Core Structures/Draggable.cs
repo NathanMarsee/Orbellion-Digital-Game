@@ -9,7 +9,11 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public Transform parentToReturnTo = null;
     public Transform placeholderParent = null;
     GameObject placeholder = null;
-    public void OnBeginDrag(PointerEventData eventData){
+    public Color highlightColor;
+    private Color originalColor;
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
         placeholder = new GameObject();
         placeholder.transform.SetParent(this.transform.parent);
         LayoutElement le = placeholder.AddComponent<LayoutElement>();
@@ -26,23 +30,32 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
 
+        // Store original color and change to highlight color
+        originalColor = parentToReturnTo.GetComponent<Image>().color;
+        parentToReturnTo.GetComponent<Image>().color = highlightColor;
+
         Debug.Log("Begin Drag");
     }
 
-    public void OnDrag(PointerEventData eventData){
+    public void OnDrag(PointerEventData eventData)
+    {
         this.transform.position = eventData.position;
 
         int newSiblingIndex = placeholderParent.childCount;
 
-        if(placeholder.transform.parent != placeholderParent){
+        if (placeholder.transform.parent != placeholderParent)
+        {
             placeholder.transform.SetParent(placeholderParent);
         }
-        
-        for(int i = 0; i < placeholderParent.childCount; i++){
-            if(this.transform.position.x < placeholderParent.GetChild(i).position.x){
+
+        for (int i = 0; i < placeholderParent.childCount; i++)
+        {
+            if (this.transform.position.x < placeholderParent.GetChild(i).position.x)
+            {
                 newSiblingIndex = i;
 
-                if(placeholder.transform.GetSiblingIndex() < newSiblingIndex){
+                if (placeholder.transform.GetSiblingIndex() < newSiblingIndex)
+                {
                     newSiblingIndex--;
                 }
 
@@ -51,13 +64,16 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
 
         placeholder.transform.SetSiblingIndex(newSiblingIndex);
-
     }
 
-    public void OnEndDrag(PointerEventData eventData){
+    public void OnEndDrag(PointerEventData eventData)
+    {
         this.transform.SetParent(parentToReturnTo);
         this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
         GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+        // Revert to original color
+        parentToReturnTo.GetComponent<Image>().color = originalColor;
 
         Destroy(placeholder);
         Debug.Log("End Drag");

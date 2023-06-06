@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: -261710401489015334}
   - component: {fileID: 997073758}
   m_Layer: 5
-  m_Name: RegCard
+  m_Name: CardToHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   typeText: {fileID: 2229979699975510593}
   frameImage: {fileID: 8299285621898492720}
   artworkImage: {fileID: 2765818112892705189}
-  cardBack: 1
+  cardBack: 0
 --- !u!114 &-261710401489015334
 MonoBehaviour:
   m_ObjectHideFlags: 0

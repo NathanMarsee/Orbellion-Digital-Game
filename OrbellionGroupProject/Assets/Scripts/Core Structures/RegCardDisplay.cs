@@ -33,6 +33,7 @@ public class RegCardDisplay : MonoBehaviour
 
     void Start()
     {
+
         displayCard = this.gameObject.GetComponent<Card>();
        
         //id = displayCard.id;
@@ -73,7 +74,6 @@ public class RegCardDisplay : MonoBehaviour
         typeText.text = " " + type;
         elementText.text = " " + element;
         */
-
         staticCardBack = cardBack;
 
     }

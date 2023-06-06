@@ -20,6 +20,8 @@ public class Deck : MonoBehaviour
     //public GameObject playerDeck;
     public GameObject[] Clones;
 
+    public int deckSize;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class Deck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(cards.Count < 9)
         {
             cardInDeck1.SetActive(false);
