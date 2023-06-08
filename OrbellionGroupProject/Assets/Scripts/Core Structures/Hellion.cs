@@ -113,4 +113,9 @@ public abstract class Hellion : MonoBehaviour
         physDef += i;
     }
     */
+
+    public Element GetElement()
+    {
+        return element;
+    }
 }
